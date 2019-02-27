@@ -1,0 +1,40 @@
+body .container {
+    box-sizing: border-box;
+    width: 100%;
+    padding: 0 200px 0 100px;
+    background: #b5b5b5;
+    overflow: hidden;
+}
+/* .container p {
+    float: left;
+    background: #ff9dce;
+    width: 100%;
+} */
+.container .center {
+    width: 100%;
+    height: 250px;
+    background: pink;
+    float: left;
+}
+.container .left {
+    width: 100px;
+    height: 250px;
+    background: blue;
+    float: left;
+    margin-left: -100%;
+    position: relative;
+    left: -100px;
+}
+.container .right {
+    width: 200px;
+    height: 250px;
+    background: blueviolet;
+    float: left;
+    margin-left: -200px;
+    position: relative;
+    left: 200px;
+}
+p {
+    font-size: 16px;
+    line-height: 1.6;
+}

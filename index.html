@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>To do list app</title>
+        <link rel="stylesheet" type="text/css" href="resource/css/reset.css">
+        <link rel="stylesheet" type="text/css" href="resource/css/style.css">
+    </head>
+    <body>
+        <header>
+            <input id="item" type="text" maxlength="35" placeholder="输入你的待办事项...">
+            <button>
+                <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                    viewBox="0 0 1000 1000" enable-background="new 0 0 1000 1000" xml:space="preserve">
+                    <!-- <metadata> Svg Vector Icons : http://www.onlinewebfonts.com/icon </metadata> -->
+                    <g>
+                        <path
+                            d="M500,990C229.4,990,10,770.6,10,500C10,229.3,229.4,10,500,10c270.6,0,490,219.3,490,490C990,770.6,770.6,990,500,990z M500,132.5C297.1,132.5,132.5,297,132.5,500c0,202.9,164.6,367.5,367.5,367.5c203,0,367.5-164.6,367.5-367.5C867.5,297,703,132.5,500,132.5L500,132.5z M561.3,745H438.8V561.3H255V438.8h183.7V255h122.5v183.8H745v122.5H561.3V745L561.3,745z" />
+                    </g>
+                </svg>
+            </button>
+        </header>
+        <ul class="todo">
+            <li>
+                <div class="buttons">
+                    <button class="complete">
+                        <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                            viewBox="0 0 1000 1000" enable-background="new 0 0 1000 1000" xml:space="preserve">
+                            <!-- <metadata> Svg Vector Icons : http://www.onlinewebfonts.com/icon </metadata> -->
+                            <g>
+                                <path
+                                    d="M990,498.1c-9.3,280.6-215.4,488.3-487.3,490.5C227,990.8,11,780.7,10,498.5C9,225.3,226.3,11.5,498.6,11.4C771.7,11.2,981.9,225.7,990,498.1z M930.2,507.3c13.5-229.2-200.2-439.5-422-439C269.5,68.8,76.2,256.7,66.2,488.6c-9.8,229.7,202.5,447.1,427.1,443.9C731.8,928.9,928.5,741.8,930.2,507.3z" />
+                                <path
+                                    d="M260.2,480.7c35.8,20.5,64.1,45.1,87.4,75.4c38.6,50.2,75,44.8,116.7,1c69.1-72.6,141.6-142,212.1-213.3c16.7-16.8,35.8-38.4,57.1-18.2c21.1,20,2.4,38.8-15.6,56.3c-91.7,89.5-183.2,179.3-272,271.7c-27.4,28.5-45.8,33.4-74,3.2c-41-43.9-84.8-85.1-127.7-127c-9.8-9.6-19-19-7.6-32C242.9,490.6,252.3,486.2,260.2,480.7z" />
+                            </g>
+                        </svg>
+                    </button>
+                    <button class="trash">
+                        <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                            viewBox="0 0 1000 1000" enable-background="new 0 0 1000 1000" xml:space="preserve">
+                            <!-- <metadata> Svg Vector Icons : http://www.onlinewebfonts.com/icon </metadata> -->
+                            <g>
+                                <g transform="translate(0.000000,511.000000) scale(0.100000,-0.100000)">
+                                    <path
+                                        d="M4259.7,4988.1c-266.1-68.7-532.1-287.5-656.6-545c-66.5-135.2-73-163.1-79.4-407.7l-8.6-263.9H2126.9c-1345.4,0-1388.3-2.1-1457-42.9c-199.6-122.3-201.7-412-2.1-519.3c62.2-32.2,124.4-38.6,442-38.6H1481V-809.7V-4790h3519h3519v3980.3v3980.4h371.2c317.6,0,379.8,6.4,442,38.6c199.6,107.3,197.4,397-2.1,519.3c-68.7,40.8-111.6,42.9-1459.1,42.9H6480.6v221c0,259.6-38.6,399.1-163.1,585.8c-96.6,145.9-248.9,270.4-437.7,360.5l-139.5,66.5l-686.6,4.3C4562.3,5011.7,4337,5005.3,4259.7,4988.1z M5746.7,4365.9c103-55.8,133-148.1,133-390.5v-203.9H5000h-879.8v203.9c0,291.8,36.5,364.8,212.4,420.6c30,8.6,345.5,15,699.5,12.9C5609.4,4404.5,5682.3,4400.2,5746.7,4365.9z M7918.2-498.5v-3669.2H5000H2081.8v3669.2v3669.2H5000h2918.2V-498.5z" />
+                                    <path d="M3068.8-552.2v-3165h300.4h300.4v3165v3165h-300.4h-300.4V-552.2z" />
+                                    <path d="M4699.6-552.2v-3165H5000h300.4v3165v3165H5000h-300.4V-552.2z" />
+                                    <path d="M6330.4-552.2v-3165h300.4h300.4v3165v3165h-300.4h-300.4V-552.2z" />
+                                </g>
+                            </g>
+                        </svg>
+                    </button>
+                </div>
+            </li>
+        </ul>
+        <ul class="completed">
+
+        </ul>
+        <ul class="removed">
+            
+        </ul>
+        <script src="resource/js/main.js"></script>
+    </body>
+</html>
