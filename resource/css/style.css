@@ -1,4 +1,3 @@
-/* element selector */
 body {
     font-family: sans-serif;
     background: hsl(0, 0%, 84%);
@@ -38,42 +37,63 @@ header button {
     position: absolute;
     right: 20px;
     top: 20px;
-    background: #dadada;
+    background: #fff;
 }
-header button, header button svg {
+header button svg {
+    width: 80%;
+    height: 80%;
+    border: 0;
     display: inline-block;
     vertical-align: middle;
 }
-ul.todo li {
+/* how to change color of svg format? */
+header button svg #Plus {
+    fill: #2f8e6d;
+}
+ul li {
     box-sizing: border-box;
     width: 100%;
+    min-height: 50px;
     margin: 0 0 10px 0;
-    height: 60px;
     background: #fff;
     border-radius: 15px;
     position: relative;
-    padding: 0 120px 0 0;
+    padding: 17px 130px 17px 15px;
+    font-size: 16px;
 }
-ul.todo li .buttons {
-    width: 130px;
-    height: 60px;
+ul li:last-of-type{
+    margin: 0;
+}
+ul li .buttons {
+    width: 110px;
+    height: 50px;
     background: none;
     position: absolute;
     right: 0;
     top: 0;
     border: 0;
 }
-ul.todo li .buttons button.complete {
-    width: 60px;
-    height: 60px;
+ul li .buttons button svg{
+    width: 70%;
+    height: 70%;
+    border: 0;
+    display: inline-block;
+    vertical-align: middle;
+}
+ul li .buttons button svg path {
+    fill: #2f8e6d;
+}
+ul li .buttons button.remove {
+    width: 50px;
+    height: 50px;
     background: none;
     float: left;
     border: 0;
     -webkit-appearance: none;
 }
-ul.todo li .buttons button.trash {
-    width: 60px;
-    height: 60px;
+ul li .buttons button.complete {
+    width: 50px;
+    height: 50px;
     background: none;
     border: 0;
     float: left;
@@ -81,12 +101,12 @@ ul.todo li .buttons button.trash {
     left: 10px;
     -webkit-appearance: none;
 }
-ul.todo li .buttons:last-child::before {
+ul li .buttons button:last-of-type::before {
     content: "";
     width: 2px;
-    height: 40px;
+    height: 30px;
     background: grey;
     position: absolute;
-    right: 62px;
+    right: 52px;  
     top: 10px;
 }
